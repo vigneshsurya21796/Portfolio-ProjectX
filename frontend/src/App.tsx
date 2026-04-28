@@ -1,4 +1,12 @@
+import { Routes, Route } from "react-router-dom";
+
 const App = () => {
-  return <div className={`font-bold text-3xl`}>App</div>;
+  return (
+    <div>
+      <Routes>
+        <Route />
+      </Routes>
+    </div>
+  );
 };
 export default App;
