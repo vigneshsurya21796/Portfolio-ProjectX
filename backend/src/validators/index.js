@@ -1,4 +1,4 @@
-const body = require("express-validator");
+const { body } = require("express-validator");
 const uservalidator = () => {
-  return [body("email").trim()];
+  return [body("email").trim().];
 };

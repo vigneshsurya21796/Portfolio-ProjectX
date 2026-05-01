@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const globalerrorhandler = require("./src/Middleware/error");
 const cookieparser = require("cookie-parser");
 const authrouter = require("./src/routes/auth.routes");
 app.use(express.json({ limit: "16kb" }));
@@ -19,4 +20,5 @@ app.get("/", (req, res) => {
   res.send("ProjectX");
 });
 app.use("api/v1/auth", authrouter);
+app.use(globalerrorhandler);
 module.exports = app;
