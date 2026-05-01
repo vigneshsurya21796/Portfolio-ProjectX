@@ -6,6 +6,7 @@ require("dotenv").config({
   path: path.join(__dirname, "..", `.env.${process.env.NODE_ENV}`),
 });
 const PORT = process.env.PORT || 5000;
+console.log(PORT);
 connectDB()
   .then((r) =>
     app.listen(PORT, (req, res) => {
